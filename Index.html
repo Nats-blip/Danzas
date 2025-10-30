@@ -151,7 +151,7 @@
             <div class="carousel-slide slide-3">
                 <div class="slide-content">
                     <div class="slide-img">
-                        <img src="img/home/1b1aaa434b4dba5468c0332e4e2d02fc (1).jpg" alt="Morenada">
+                        <img src="img/home/Airbrush-Image-Enhancer-1761775313421.jpg" alt="Morenada">
                     </div>
                     <div class="slide-text">
                         <h2>Morenada</h2>
@@ -164,7 +164,7 @@
             <div class="carousel-slide slide-4">
                 <div class="slide-content reverse">
                     <div class="slide-img">
-                        <img src="img/home/istockphoto-508494124-612x612.jpg" alt="Tinku">
+                        <img src="img/home/Airbrush-Image-Enhancer-1761776259747.jpg" alt="Tinku">
                     </div>
                     <div class="slide-text">
                         <h2>Tinku</h2>
@@ -225,6 +225,15 @@
             </div>
         </div>
     </section>
+        <footer>
+        <ul class="footer-links">
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+            <li><a href="#danzas">Danzas</a></li>
+            <li><a href="#timeline">Historia</a></li>
+        </ul>
+        <p class="copyright">© 2024 Bolivia Cultural. Tradición Ancestral del Altiplano.</p>
+    </footer>
 
     <script>
         // Navbar scroll
@@ -397,6 +406,51 @@
                 danzasDropdown.classList.remove('active');
             }
         });
+          // Custom cursor (desktop only)
+        if (window.innerWidth > 1024) {
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            // Cursor effects on links
+            document.querySelectorAll('a, .grid-item').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2)';
+                    cursor.style.borderColor = 'var(--primary)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.borderColor = 'var(--primary)';
+                });
+            });
+        }
+         // Observe all animated elements
+        document.querySelectorAll('.content-side, .image-side, .grid-item, .stat-item, .media-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Custom cursor (desktop only)
+        if (window.innerWidth > 1024) {
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+            });
+
+            // Cursor effects on links
+            document.querySelectorAll('a, .grid-item, .media-item').forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2)';
+                    cursor.style.borderColor = 'var(--primary)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.borderColor = 'var(--primary)';
+                });
+            });
+        }
     </script>
 </body>
 </html>
